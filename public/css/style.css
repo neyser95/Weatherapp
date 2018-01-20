@@ -1,0 +1,67 @@
+html { 
+    background: url(https://farm2.staticflickr.com/1113/654057570_c13af4cb91.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+      
+body {
+          
+    background: none;
+          
+}
+      
+@media (min-width: 768px) {
+            
+    .container{
+                
+        max-width: 576px;
+                
+    }
+          
+}
+
+@media (min-width: 992px) {
+            
+    .container{
+                
+        max-width: 576px;
+                
+    }
+          
+}
+
+@media (min-width: 1200px) {
+            
+    .container{
+                
+        max-width: 576px;
+                
+    }
+          
+}
+      
+.container {
+          
+    text-align: center;
+    margin-top: 100px;
+          
+}
+      
+input {
+          
+    margin: 20px 0;
+}
+      
+#weatherbox{
+    
+    margin: 20px auto;
+    padding:15px;
+    background-color: rgba(135, 206, 250, 0.5);
+    display: none;
+}
+#info{
+    font-weight: bold;
+    font-size: 16px;
+}

@@ -1,0 +1,32 @@
+<% include partials/header %>
+
+<div class="container">
+    
+    <h1>What's the Weather?</h1>
+         
+    <div id="weatherbox">
+        <% if(data === undefined){ %>
+                <p="info"></p>
+        <% } %>
+        <% if (err !== undefined && code !== undefined){%>
+            <h1><%= "ERROR " +  code %> </h1>
+            <p id="info"><%= mess + " please try again or try a different city." %></p>
+        <% } %>
+        <% if(data !== undefined && err === undefined){  %>
+            <p id="info"><%="The weather in " +cityName+ " is currently " +data["weather"][0]["description"]+". The temperature is " +fah+ "˚F with a wind speed of " +data["wind"]["speed"]+ " MPH." %></p>
+        <% } %>
+        
+    </div>
+    <form action="/" method="POST">
+        <div class="form-group">
+            <label for="city">Enter the name of a city.</label>
+            <input type="text" class="form-control" id="city" name="city" aria-describedby="city" placeholder="E.g. New York, Tokyo" value="">
+        </div>
+        <button id="myBtn" type="submit" class="btn btn-primary">Submit</button>
+    </form>
+         
+
+         
+</div> 
+
+<% include partials/footer %>
